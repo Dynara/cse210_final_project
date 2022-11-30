@@ -14,14 +14,14 @@ class MoveRacketAction(Action):
         body1 = racket1.get_body()
         velocity1 = body1.get_velocity()
         position1 = body1.get_position()
-        x = position1.get_x()
+        y1 = position1.get_y()
         
         position1 = position1.add(velocity1)
 
-        if x < 0:
-            position1 = Point(0, position1.get_y())
-        elif x > (SCREEN_WIDTH - RACKET_WIDTH):
-            position1 = Point(SCREEN_WIDTH - RACKET_WIDTH, position1.get_y())
+        if y1 < 0:
+            position1 = Point(position1.get_x(), 0)
+        elif y1 > (SCREEN_HEIGHT - RACKET_HEIGHT):
+            position1 = Point(position1.get_x(), SCREEN_HEIGHT - RACKET_HEIGHT)
             
         body1.set_position(position1)
 
@@ -32,14 +32,14 @@ class MoveRacketAction(Action):
         body2 = racket2.get_body()
         velocity2 = body2.get_velocity()
         position2 = body2.get_position()
-        x = position2.get_x()
+        y2 = position2.get_y()
         
         position2 = position2.add(velocity2)
 
-        if x < 0:
-            position2 = Point(0, position2.get_y())
-        elif x > (SCREEN_WIDTH - RACKET_WIDTH):
-            position2 = Point(SCREEN_WIDTH - RACKET_WIDTH, position2.get_y())
+        if y2 < 0:
+            position2 = Point(position2.get_x(), 0)
+        elif y2 > (SCREEN_HEIGHT - RACKET_HEIGHT):
+            position2 = Point(position2.get_x(), SCREEN_HEIGHT - RACKET_HEIGHT)
             
         body2.set_position(position2)
         

@@ -10,16 +10,16 @@ class ControlRacketAction(Action):
     def execute(self, cast, script, callback):
         racket1 = cast.get_first_actor(RACKET_GROUP1)
         if self._keyboard_service.is_key_down(UP1): 
-            racket1.swing_left()
+            racket1.swing_up()
         elif self._keyboard_service.is_key_down(DOWN1): 
-            racket1.swing_right()  
+            racket1.swing_down()  
         else: 
             racket1.stop_moving()        
 
         racket2 = cast.get_first_actor(RACKET_GROUP2)
         if self._keyboard_service.is_key_down(UP2): 
-            racket2.swing_left()
+            racket2.swing_up()
         elif self._keyboard_service.is_key_down(DOWN2): 
-            racket2.swing_right()  
+            racket2.swing_down()  
         else: 
             racket2.stop_moving()  

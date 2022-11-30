@@ -42,17 +42,12 @@ class CollideBordersAction(Action):
                 self._audio_service.play_sound(over_sound)
         """
         # If ball hits bottom wall
-        if y > FIELD_BOTTOM:
-            ball.bounce_x()
-            self._audio_service.play_sound(bounce_sound)
-
-        # If ball hits top wall
-        if y < FIELD_TOP:
+        if y >= (FIELD_BOTTOM - BALL_HEIGHT):
             ball.bounce_y()
             self._audio_service.play_sound(bounce_sound)
 
         # If left player misses the ball
-        elif x <= (FIELD_LEFT - BALL_WIDTH):
+        elif x <= FIELD_LEFT:
             ## NEED to set up scoring ##
             stats = cast.get_first_actor(STATS_GROUP)
             stats.lose_life()
@@ -63,8 +58,13 @@ class CollideBordersAction(Action):
                 callback.on_next(GAME_OVER)
                 self._audio_service.play_sound(over_sound)
 
+        # If ball hits top wall
+        if y < (FIELD_TOP - BALL_HEIGHT):
+            ball.bounce_y()
+            self._audio_service.play_sound(bounce_sound)
+
         # If right player misses the ball
-        elif x >= (FIELD_RIGHT - BALL_WIDTH):
+        elif x >= FIELD_RIGHT:
             ## NEED to set up scoring ##
             stats = cast.get_first_actor(STATS_GROUP)
             stats.lose_life()

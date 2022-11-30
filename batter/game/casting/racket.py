@@ -42,19 +42,16 @@ class Racket(Actor):
         self._body.set_position(new_position)
 
 
-# Need to change this to up and down
-
-
-    def swing_left(self):
-        """Steers the bat to the left."""
-        velocity = Point(-RACKET_VELOCITY, 0)
+    def swing_up(self):
+        """Steers the bat up"""
+        velocity = Point(0, -RACKET_VELOCITY)
         self._body.set_velocity(velocity)
-        
-    def swing_right(self):
-        """Steers the bat to the right."""
-        velocity = Point(RACKET_VELOCITY, 0)
+
+    def swing_down(self):
+        """Steers the bat down"""
+        velocity = Point(0, RACKET_VELOCITY)
         self._body.set_velocity(velocity)
-    
+
     def stop_moving(self):
         """Stops the bat from moving."""
         velocity = Point(0, 0)
