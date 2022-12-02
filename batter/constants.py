@@ -49,11 +49,11 @@ SPACE = "space"
 ENTER = "enter"
 PAUSE = "p"
 
-UP1 = 'w'
-DOWN1 = 's'
+UP1 = 'i'
+DOWN1 = 'k'
 
-UP2 = 'i'
-DOWN2 = 'k'
+UP2 = 'w'
+DOWN2 = 's'
 
 # SCENES
 NEW_GAME = 0
@@ -106,16 +106,14 @@ BALL_VELOCITY = 6
 
 # RACKET
 RACKET_GROUP1 = "racket1"
-RACKET_IMAGES = [f"wk11 batter/batter-complete/batter-complete/batter/assets/images/{n:03}.png" for n in range(100, 103)]
-#RACKET_WIDTH = 106
-#RACKET_HEIGHT = 28
+RACKET_IMAGES = [f"wk11 batter/batter-complete/batter-complete/batter/assets/images/{n:03}.png" for n in range(109, 111)]
 RACKET_WIDTH = 30
 RACKET_HEIGHT = 100
 RACKET_RATE = 6
 RACKET_VELOCITY = 7
 
 RACKET_GROUP2 = "racket2"
-RACKET_IMAGES = [f"wk11 batter/batter-complete/batter-complete/batter/assets/images/{n:03}.png" for n in range(100, 103)]
+RACKET_IMAGES2 = [f"wk11 batter/batter-complete/batter-complete/batter/assets/images/{n:03}.png" for n in range(106, 108)]
 RACKET_WIDTH = 30
 RACKET_HEIGHT = 100
 RACKET_RATE = 6

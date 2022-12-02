@@ -200,26 +200,13 @@ class SceneManager:
         stats = Stats()
         cast.add_actor(STATS_GROUP, stats)
 
-    """
-    def _add_racket(self, cast):
-        cast.clear_actors(RACKET_GROUP)
-        x = CENTER_X - RACKET_WIDTH / 2
-        y = SCREEN_HEIGHT - RACKET_HEIGHT
-        position = Point(x, y)
-        size = Point(RACKET_WIDTH, RACKET_HEIGHT)
-        velocity = Point(0, 0)
-        body = Body(position, size, velocity)
-        animation = Animation(RACKET_IMAGES, RACKET_RATE)
-        racket = Racket(body, animation)
-        cast.add_actor(RACKET_GROUP, racket)
-    """
     #LEFT RACKET
     def _add_racket1(self, cast):
         cast.clear_actors(RACKET_GROUP1)
         #x = CENTER_X - RACKET_WIDTH / 2
         #y = SCREEN_HEIGHT - RACKET_HEIGHT
         y = CENTER_Y - BALL_WIDTH / 2
-        x = SCREEN_WIDTH - RACKET_WIDTH - BALL_HEIGHT
+        x = SCREEN_WIDTH - RACKET_WIDTH
 
         position = Point(x, y)
         size = Point(RACKET_WIDTH, RACKET_HEIGHT)
@@ -235,13 +222,13 @@ class SceneManager:
         #x = CENTER_X - RACKET_WIDTH / 2
         #y = SCREEN_HEIGHT - RACKET_HEIGHT
         y = CENTER_Y - BALL_WIDTH / 2
-        x = FIELD_LEFT - RACKET_WIDTH - BALL_HEIGHT
+        x = FIELD_LEFT + RACKET_WIDTH - BALL_HEIGHT
 
         position = Point(x, y)
         size = Point(RACKET_WIDTH, RACKET_HEIGHT)
         velocity = Point(0, 0)
         body2 = Body(position, size, velocity)
-        animation = Animation(RACKET_IMAGES, RACKET_RATE)
+        animation = Animation(RACKET_IMAGES2, RACKET_RATE)
         racket2 = Racket(body2, animation)
         cast.add_actor(RACKET_GROUP2, racket2)
 
