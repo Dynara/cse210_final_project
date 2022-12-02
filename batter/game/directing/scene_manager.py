@@ -235,7 +235,7 @@ class SceneManager:
         #x = CENTER_X - RACKET_WIDTH / 2
         #y = SCREEN_HEIGHT - RACKET_HEIGHT
         y = CENTER_Y - BALL_WIDTH / 2
-        x = SCREEN_WIDTH - RACKET_WIDTH - BALL_HEIGHT
+        x = FIELD_LEFT - RACKET_WIDTH - BALL_HEIGHT
 
         position = Point(x, y)
         size = Point(RACKET_WIDTH, RACKET_HEIGHT)

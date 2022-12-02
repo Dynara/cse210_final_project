@@ -6,12 +6,12 @@ from game.casting.color import Color
 # -------------------------------------------------------------------------------------------------- 
 
 # GAME
-GAME_NAME = "Batter"
+GAME_NAME = "Pong"
 FRAME_RATE = 60
 
 # SCREEN
-SCREEN_WIDTH = 1040
-SCREEN_HEIGHT = 680
+SCREEN_WIDTH = 1040  # X
+SCREEN_HEIGHT = 680   # Y
 CENTER_X = SCREEN_WIDTH / 2
 CENTER_Y = SCREEN_HEIGHT / 2
 
@@ -105,11 +105,19 @@ BALL_HEIGHT = 28
 BALL_VELOCITY = 6
 
 # RACKET
-RACKET_GROUP1 = "rackets"
-RACKET_GROUP2 = 'rackets'
+RACKET_GROUP1 = "racket1"
 RACKET_IMAGES = [f"wk11 batter/batter-complete/batter-complete/batter/assets/images/{n:03}.png" for n in range(100, 103)]
-RACKET_WIDTH = 106
-RACKET_HEIGHT = 28
+#RACKET_WIDTH = 106
+#RACKET_HEIGHT = 28
+RACKET_WIDTH = 30
+RACKET_HEIGHT = 100
+RACKET_RATE = 6
+RACKET_VELOCITY = 7
+
+RACKET_GROUP2 = "racket2"
+RACKET_IMAGES = [f"wk11 batter/batter-complete/batter-complete/batter/assets/images/{n:03}.png" for n in range(100, 103)]
+RACKET_WIDTH = 30
+RACKET_HEIGHT = 100
 RACKET_RATE = 6
 RACKET_VELOCITY = 7
 
